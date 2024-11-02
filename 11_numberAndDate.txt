@@ -1,0 +1,172 @@
+#Numbers :-
+
+1. Number Type
+
+JavaScript has a single number type, which is a double-precision 64-bit binary format (IEEE 754).
+It can represent integers, floating-point numbers, and special values like Infinity, -Infinity, and NaN (Not a Number).
+
+2. Creating Numbers
+
+You can create numbers using:
+
+let integer = 42;          // Integer
+let float = 3.14;         // Floating-point number
+let hex = 0x2A;           // Hexadecimal (42 in decimal)
+let binary = 0b101010;    // Binary (42 in decimal)
+let octal = 0o52;         // Octal (42 in decimal)
+
+3. Number Methods
+
+JavaScript provides several built-in methods for number manipulation:
+
+Number(): Converts a value to a number.
+
+parseInt(): Parses a string and returns an integer.
+
+parseFloat(): Parses a string and returns a floating-point number.
+
+isNaN(): Checks if a value is NaN.
+
+isFinite(): Checks if a value is a finite number.
+
+4. Arithmetic Operations
+
+You can perform basic arithmetic operations:
+
+Addition: +
+
+Subtraction: -
+
+Multiplication: *
+
+Division: /
+
+Modulus: %
+
+5. Math Object
+
+The Math object provides useful mathematical constants and functions:
+
+Math.PI: The value of π (Pi).
+
+Math.sqrt(): Square root.
+
+Math.pow(): Exponentiation.
+
+Math.random(): Generates a random number between 0 and 1.
+
+Math.round(), Math.floor(), and Math.ceil(): Rounding functions.
+
+6. Number Formatting
+
+You can format numbers using:
+
+toFixed(): Formats a number using fixed-point notation.
+
+toPrecision(): Formats a number to a specified length.
+
+7. Special Values
+
+NaN: Represents a value that is not a number.
+
+Infinity and -Infinity: Represents positive and negative infinity, respectively.
+
+8. Type Conversion
+
+You can convert numbers to strings using toString() or string concatenation, and vice versa using Number() or parseInt()/parseFloat().
+
+Example Code
+
+Here’s a simple example demonstrating some of these concepts:
+
+javascript
+
+let num1 = 10;
+let num2 = 5;
+
+// Arithmetic Operations
+let sum = num1 + num2; // 15
+let product = num1 * num2; // 50
+
+// Math Object
+let sqrt = Math.sqrt(num1); // 3.1622776601683795
+let randomNum = Math.random(); // Random number between 0 and 1
+
+// Type Conversion
+let strNum = num1.toString(); // "10"
+let parsedNum = parseInt("20"); // 20
+
+console.log(sum, product, sqrt, randomNum, strNum, parsedNum);
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+
+#Date 
+
+
+
+Date in JavaScript: A Simple Explanation
+
+In JavaScript, the Date object is used to work with dates and times. 
+It allows you to create, manipulate, and format dates easily. 
+The Date object can represent a specific moment in time, including 
+the year, month, day, hour, minute, second, and millisecond.
+
+Creating a Date Object
+You can create a Date object in several ways:
+
+Current Date and Time:
+
+javascript
+
+const now = new Date();
+console.log(now); // Outputs the current date and time
+
+
+Specific Date:
+
+javascript
+
+const specificDate = new Date('2023-10-01');
+console.log(specificDate); // Outputs the date for October 1, 2023
+
+
+Date with Parameters:
+
+javascript
+
+const customDate = new Date(2023, 9, 1); // Note: Months are 0-indexed (0 = January)
+console.log(customDate); // Outputs the date for October 1, 2023
+
+Common Methods
+
+Get the Current Date:
+
+javascript
+
+const today = new Date();
+console.log(today.toDateString()); // Outputs a readable date string
+
+Get Individual Components:
+
+javascript
+
+const date = new Date();
+console.log(date.getFullYear()); // Outputs the year
+console.log(date.getMonth());    // Outputs the month (0-11)
+console.log(date.getDate());     // Outputs the day of the month (1-31)
+
+Set Date Components:
+
+javascript
+
+const dateToChange = new Date();
+dateToChange.setFullYear(2025);
+console.log(dateToChange); // Outputs the updated date
+
+Summary
+
+The Date object in JavaScript is versatile for managing dates and times.
+You can create a date using the current time, a specific date string, or by passing parameters.
+The Date object provides methods to retrieve and modify date components.

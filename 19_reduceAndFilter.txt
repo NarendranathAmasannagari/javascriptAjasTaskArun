@@ -1,0 +1,106 @@
+#Reduce
+
+-->The JavaScript Array.reduce() method iterates over an array, applying a reducer function 
+   to each element, accumulating(ex:- sum) a single output value. It takes an initial value and 
+   processes elements from left to right, reducing the array to a single result.
+
+Syntax:-
+
+-->array.reduce( function(total, currentValue, currentIndex, arr),  initialValue )
+
+-->Parameters:-
+ 
+   This method accepts five parameters as mentioned above and described below:
+   function(total, currentValue, index, arr): It is the required parameter and 
+   is used to run for each element of the array. It contains four parameters 
+   which are listed below:
+
+   "total":-	Specifies the initial value or previously returned value of the function	
+   Required
+   
+   "currentValue":-	Specifies the value of the current element	Required
+   
+   "currentIndex":-	Specifies the array index of the current element	Optional
+   
+   "arr":-	Specifies the array object the current element belongs to	Optional
+
+   "initialValue":- It is an optional parameter and is used to specify the value to 
+   be passed to the function as the initial value.
+   
+   Return value:
+   
+   The JavaScript array reduce method returns a single value/element after 
+   traversing the complete array.
+
+   1st:-
+
+   // Input array
+   let arr = [175, 50, 25];
+   
+   // Callback function for reduce method
+   function subofArray(total, num) {
+     return total - num;
+     }
+     
+     //Function to execute reduce method 
+     function myGeeks(item) {
+        // Display output
+        console.log(arr.reduce(subofArray));
+        }
+        myGeeks()
+
+
+#Filter 
+
+
+The filter() method creates a new array containing elements that satisfy a specified condition.
+
+The filter() method skips empty elements and does not change the original array.
+
+
+Syntax :-
+
+array.filter(callback(element, index, arr), thisValue)
+
+This method accepts five parameters as mentioned above and described below: 
+
+"callback":-	The function is to be called for each element of the array.
+
+"element":-	The value of the element currently being processed.
+
+"index":-	(Optional) The index of the current element in the array, starting from 0.
+
+"arr":-	(Optional) The complete array on which Array.every is called.
+
+"thisValue":-	(Optional) The context to be passed as this to be used 
+                 while executing the callback function. If not provided, 
+                 undefined is used as the default context.
+
+Return value:-
+
+It returns an array of elements that pass the test and an empty array 
+if no elements pass the test. 
+
+example:-
+
+1st:-
+
+function isPositive(value) {
+    return value > 0;
+}
+
+let filtered = [112, 52, 0, -1, 944].filter(isPositive);
+console.log(filtered);
+
+2nd:-
+
+function isEven(value) {
+    return value % 2 == 0;
+}
+
+let filtered = [11, 98, 31, 23, 944].filter(isEven);
+console.log(filtered);
+
+
+
+
